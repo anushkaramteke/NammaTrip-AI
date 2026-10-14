@@ -1,0 +1,250 @@
+/* BudgetEstimator Component CSS */
+
+.budget-section {
+  padding: 84px 0;
+  background-color: var(--ivory-100);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.budget-tiers-switch {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 980px;
+  margin: 0 auto 44px;
+}
+
+.tier-switch-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 16px 20px;
+  background: var(--surface-white);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-normal);
+  text-align: center;
+}
+
+.tier-switch-btn:hover {
+  border-color: var(--forest-600);
+  transform: translateY(-2px);
+}
+
+.tier-switch-btn.active {
+  background: var(--forest-900);
+  border-color: var(--forest-900);
+  box-shadow: 0 8px 24px rgba(20, 61, 43, 0.22);
+}
+
+.tier-name {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--forest-950);
+}
+
+.tier-switch-btn.active .tier-name {
+  color: var(--surface-white);
+}
+
+.tier-rate {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--terracotta-700);
+}
+
+.tier-switch-btn.active .tier-rate {
+  color: var(--gold-400);
+}
+
+/* Calculator Grid */
+.budget-calculator-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 32px;
+}
+
+.calculator-controls-card,
+.breakdown-details-card {
+  background: var(--surface-white);
+  border-radius: var(--radius-xl);
+  border: 1.5px solid var(--border-medium);
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+}
+
+.calc-card-title,
+.breakdown-card-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--forest-950);
+  margin-bottom: 24px;
+}
+
+/* Inputs */
+.calc-inputs-group {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-bottom: 32px;
+}
+
+.input-field-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.field-label {
+  font-size: 0.92rem;
+  color: var(--text-dark);
+}
+
+.field-label strong {
+  color: var(--forest-800);
+}
+
+.range-slider {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--ivory-200);
+  outline: none;
+  accent-color: var(--terracotta-600);
+  cursor: pointer;
+}
+
+.range-marks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* Total Box */
+.estimate-highlight-box {
+  background: linear-gradient(135deg, var(--forest-900) 0%, var(--forest-800) 100%);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  color: var(--surface-white);
+  text-align: center;
+  border: 1.5px solid var(--gold-600);
+}
+
+.highlight-tag {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gold-400);
+  margin-bottom: 8px;
+}
+
+.highlight-price {
+  font-size: clamp(1.8rem, 2.5vw, 2.3rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 6px;
+}
+
+.highlight-sub {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--forest-200);
+}
+
+.highlight-caption {
+  font-size: 0.8rem;
+  color: var(--ivory-200);
+}
+
+/* Breakdown List */
+.breakdown-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.breakdown-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--ivory-50);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+}
+
+.item-icon-col {
+  font-size: 1.4rem;
+}
+
+.item-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.item-row-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--forest-950);
+}
+
+.item-cost {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--terracotta-700);
+}
+
+.item-desc {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.budget-tip-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--gold-50);
+  border: 1px solid var(--gold-100);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+}
+
+.tip-bell {
+  font-size: 1.2rem;
+}
+
+.tip-caption {
+  font-size: 0.84rem;
+  color: var(--gold-800);
+  line-height: 1.5;
+}
+
+.tip-caption strong {
+  color: var(--forest-900);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .budget-tiers-switch {
+    grid-template-columns: 1fr;
+  }
+  .budget-calculator-grid {
+    grid-template-columns: 1fr;
+  }
+}

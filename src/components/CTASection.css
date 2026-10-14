@@ -1,0 +1,185 @@
+/* CTA Section CSS */
+
+.cta-section {
+  padding: 84px 0;
+  background-color: var(--ivory-100);
+  position: relative;
+}
+
+.cta-card {
+  background: linear-gradient(135deg, var(--forest-950) 0%, var(--forest-900) 60%, var(--forest-800) 100%);
+  border-radius: var(--radius-xl);
+  padding: 60px 48px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1.5px solid var(--gold-600);
+  text-align: center;
+}
+
+.cta-decor-circle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(50px);
+}
+
+.circle-1 {
+  width: 280px;
+  height: 280px;
+  background: rgba(198, 83, 40, 0.25);
+  top: -80px;
+  left: -60px;
+}
+
+.circle-2 {
+  width: 320px;
+  height: 320px;
+  background: rgba(198, 146, 37, 0.2);
+  bottom: -100px;
+  right: -80px;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.cta-kannada-salutation {
+  display: inline-block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--gold-400);
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.cta-title {
+  font-size: clamp(2rem, 3.6vw, 2.85rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  letter-spacing: -0.025em;
+}
+
+.cta-subtitle {
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  color: var(--ivory-200);
+  line-height: 1.6;
+  margin-bottom: 36px;
+}
+
+/* Prompt Form */
+.cta-prompt-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 8px 10px 8px 18px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  margin-bottom: 24px;
+}
+
+.cta-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+.cta-input-icon {
+  font-size: 1.2rem;
+}
+
+.cta-prompt-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #ffffff;
+  outline: none;
+}
+
+.cta-prompt-input::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.btn-cta-submit {
+  background: linear-gradient(135deg, var(--terracotta-600) 0%, var(--terracotta-700) 100%);
+  color: #ffffff;
+  padding: 14px 30px;
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+  font-weight: 800;
+  white-space: nowrap;
+  border: 1px solid var(--terracotta-400);
+  box-shadow: 0 4px 14px rgba(198, 83, 40, 0.4);
+  transition: all var(--transition-normal);
+}
+
+.btn-cta-submit:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--terracotta-500) 0%, var(--terracotta-600) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(198, 83, 40, 0.5);
+}
+
+/* Suggested Pills */
+.cta-pills-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pills-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--forest-200);
+}
+
+.pill-suggest-btn {
+  background: rgba(255, 255, 255, 0.09);
+  color: var(--ivory-100);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.pill-suggest-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border-color: var(--gold-400);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-card {
+    padding: 40px 24px;
+  }
+  .cta-prompt-form {
+    flex-direction: column;
+    border-radius: var(--radius-lg);
+    padding: 14px;
+  }
+  .cta-input-wrapper {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .btn-cta-submit {
+    width: 100%;
+    justify-content: center;
+  }
+}
